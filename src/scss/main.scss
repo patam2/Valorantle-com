@@ -1,0 +1,145 @@
+$input-bg: #FF5152 !important;
+$input-group-addon-border-color: #FF5152;
+$input-border-color: $input-bg;
+$input-color:white;
+$table-color: white !important;
+$input-border-radius: 10px;
+$focus-ring-width: 0;
+
+table {
+  border-spacing: 4px;
+  border-collapse: separate !important  ;
+
+}
+
+.h100 {
+  min-height: 90vh !important;
+}
+
+td {
+  background-color: #0f0f0f !important;
+  animation: append-animate .2s linear;
+}
+
+@font-face {
+  font-family: valfont;
+  src: url("Valorant Font.ttf");
+}
+
+
+$input-font-size: 2.5rem;
+@import './modals.scss';
+@import "../node_modules/bootstrap/scss/bootstrap";
+.answer:empty {
+  display: none;
+}
+
+
+body {
+  font-size: 200%;
+}
+
+#suggestions {
+  top: add($input-line-height * 1em, $input-padding-y * 2);
+  z-index: 9999;
+  .item {
+    background-color: white;
+    &:last-child {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    &:hover {
+      background-color: gray;
+    }
+  }
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@media (max-width: 1000px) {
+  #banner {
+    width: 100% !important; 
+  }
+  table {
+    width: 100% !important;
+  }
+  .input-group {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  #banner {
+    width: 50% !important; 
+  }
+  table {
+    width: 50% !important;
+  }
+  .input-group {
+    width: 50% !important;
+  }
+}
+
+
+.bg-val-color {
+  background-color: #FF5152;
+}
+
+.form-control {
+  padding: 0;
+  padding-left: 5px !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.bg-gray {
+  background-color: #1f1f1f;
+}
+
+.topbar {
+  background-color: black;
+  color: white;
+  border-radius: 0 0 15px/3px 15px/3px;
+}
+
+.header {
+  font-family: valfont;
+  &::first-letter {
+    font-size: 150%;
+  }
+}
+
+@keyframes append-animate {
+	from {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	to {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}
+
+
+.choosinggrid {
+  @media (max-width: 767px) {
+    flex-direction: column  !important;
+    height: calc(100% / 3);
+  }
+  background-color: black;
+  color: white;
+  height: 100%;
+  letter-spacing: 2px;
+  transition: background-color 0.5s ease-out;
+  &:hover {
+    transform: scale(1.1);
+    background-color:  #1f1f1f;
+    .logo {
+      transform: translateY(-1em);
+      transition: 0.5s;
+    }
+  }
+}
+
+
+  
